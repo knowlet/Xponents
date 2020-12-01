@@ -3,10 +3,10 @@ steps:
   args: ['ls', '-al']
 
 - name: 'bash'
-  args: ['./Xponents/script/dist.sh']
+  args: ['./script/dist.sh']
 
 - name: 'bash'
-  args: ['./Xponents/script/dist-docker.sh']
+  args: ['./script/dist-docker.sh']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/apt-gear-288208/xponents', './Xponents/dist/Xponents-*']
+  args: ['build', '-t', 'gcr.io/apt-gear-288208/xponents', './dist/Xponents-*']
