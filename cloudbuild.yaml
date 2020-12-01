@@ -1,9 +1,12 @@
 steps:
 - name: 'bash'
-  args: ['./script/dist.sh']
+  args: ['ls -al']
 
 - name: 'bash'
-  args: ['./script/dist-docker.sh']
+  args: ['./Xponents/script/dist.sh']
+
+- name: 'bash'
+  args: ['./Xponents/script/dist-docker.sh']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/apt-gear-288208/opensextant:xponents', './dist/Xponents-*']
+  args: ['build', '-t', 'gcr.io/apt-gear-288208/xponents', './Xponents/dist/Xponents-*']
