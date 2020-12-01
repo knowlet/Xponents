@@ -1,6 +1,7 @@
 steps:
-- name: 'bash'
-  args: ['bash', './script/dist.sh']
+- name: 'gcr.io/cloud-builders/mvn'
+  entrypoint: 'bash'
+  args: ['./script/dist.sh']
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/apt-gear-288208/xponents', './dist/Xponents-*']
