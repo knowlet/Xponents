@@ -1,6 +1,6 @@
 steps:
 - name: 'bash'
-  args: ['ls -al']
+  args: ['ls', '-al']
 
 - name: 'bash'
   args: ['./Xponents/script/dist.sh']
